@@ -1,0 +1,306 @@
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1rem;
+    --mono: Oxygen mono, monospace;
+    --sans: IBM Plex Sans, sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--sans);
+    font-size: var(--font-size);
+    color: var(--white);
+    background-color: var(--black);
+    margin: 0;
+    padding: 0;
+    
+    /*  line-height: 1.5;*/
+}
+h1, h2, h3 {
+    font-family: var(--mono);
+    font-weight: normal;
+    margin: 0;
+}
+a {
+    color: var(--aqua);
+    
+}
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+
+/*navbar*/
+
+nav {
+    font-family: var(--mono);
+    font-size: 100%;
+    padding: 0;
+    /* background-color: var(--dkblue); */
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0 100px;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-family: var(--mono);
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+    
+}
+nav [class*="fa-"] {    /*esto cambia el color de los iconos*/
+    font-size: 150%;
+    color: var(--aqua);
+    vertical-align: middle;
+}
+
+nav a{
+    color: var(--white);
+    text-decoration: none;
+    display: block; /*interesante: se usa esta propiedad para que el area de click agarre todo el espacio de la caja    */
+}
+
+nav a:hover *, nav [class*="fa-"]:hover {
+    color: var(--magenta);
+}
+
+
+.button:hover * {
+    color: var(--magenta);
+}
+
+.button{
+    background-color: var(--magenta);
+    color: var(--aqua);
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.button:hover{
+    background-color: var(--aqua);
+    color: var(--magenta);
+    text-decoration: none;
+}
+
+.line-gradient{
+    height: 2px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(142,0,115,1) 100%);
+
+}
+#canvas {
+	display: block;
+    z-index: -1;
+    position : absolute;
+    
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+}
+
+/* section: introduccion */
+
+#intro {
+    padding: 60px 100px;
+    margin: 20px;
+    /* max-width: 1000px; */
+    /* background-color: var(--dkblue); */
+}
+
+#intro h2 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    /* background-color: var(--plum); */
+}
+
+#intro .name {
+    font-family: var(--mono);
+}
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+    font-weight: 900;
+}
+
+#intro .slogan {
+    margin: 10px 0 0px;
+    font-size: 2.25rem;
+    font-weight: normal
+}
+
+#intro .slogan2 {
+    margin: 0px 0 50px;
+    font-size: 2.25rem;
+    font-weight: normal
+}
+
+/*proyectos*/
+
+.content-pro{
+    background-color: #00243d;
+    padding: 2px;
+    color: var(--white);
+    text-align: center;
+    margin: 2px auto;
+}
+.proyectos{
+
+    display: grid;
+    justify-content: space-evenly;
+    grid-template: 1fr / 1fr 1fr 1fr;
+}
+
+.content-pro h2{
+    font-family: var(--mono);
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px;
+}
+
+.project{
+    margin: auto;
+    height: 500px;
+    
+}
+.project img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}
+.content-pro{
+    background-color: #00243d;
+}
+
+/*section contacto*/
+#contact {
+    padding: 1rem 0;
+    background-color: var(--dkblue);
+    color: var(--white);
+    text-align: center;
+    
+}
+#contact h3 {
+    font-size: 2rem;
+    line-height: 2;
+    margin: 0;
+    padding-top: 2rem;
+}
+#contact p {
+    font-size: 1.5rem;
+    line-height: 2;
+    margin: 0;
+}
+#contact a {
+    color: var(--aqua);
+
+}
+#contact a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+ section [class*="fa-"] {    /*esto cambia el color de los iconos*/
+    padding: 2rem 0;
+    font-size: 150%;
+    color: var(--aqua);
+    vertical-align: middle;
+}
+#intro p{
+    font-family: var(--mono);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* about */
+.about-me {
+    font-family: var(--mono);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 50px;
+}
+
+
+
+@media (min-width: 850px) {
+    nav {
+      max-width: 1400px;
+      margin: 2rem auto;
+    }
+    nav li:first-child {
+      flex-basis: auto;
+      text-align: left;
+      margin-right: auto;
+    }
+}
+@media (max-width: 950px) {
+    .project img {
+        width: 250px;
+        height: 250px;
+        border-radius: 5px;
+        margin: 0;
+        padding: 0;
+    }
+  }
+
+  /*media queries*/
+/*footer: */
+
+footer {
+    padding: 1.5rem;
+    background-color: var(--dkblue);
+    color: var(--white);
+    text-align: center;
+    vertical-align: middle;
+    margin: 2px auto;
+    font-size: 2rem;
+}
+footer a {
+    color: var(--aqua);
+    text-decoration: none;
+}
+footer ul {  
+    color: var(--aqua);
+    list-style-type: none;
+    display: flex;
+    margin: 2rem 0 ;
+    padding: 0;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+footer p {
+    font-size: 2rem;
+    margin: 0;
+}
