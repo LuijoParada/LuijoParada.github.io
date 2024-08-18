@@ -48,6 +48,7 @@ a:hover {
 
 nav {
     font-family: var(--mono);
+    margin: 2rem auto;
     font-size: 100%;
     padding: 0;
     /* background-color: var(--dkblue); */
@@ -72,6 +73,7 @@ nav ul {
 nav li:first-child {
     flex-basis: 100%;
     text-align: center;
+    min-width: 200px;
     
 }
 nav [class*="fa-"] {    /*esto cambia el color de los iconos*/
@@ -117,17 +119,25 @@ nav a:hover *, nav [class*="fa-"]:hover {
 	display: block;
     z-index: -1;
     position : absolute;
-    
     left: 0;
     right: 0;
     margin: auto;
-    
+    width: 100%;
+    height: 100%;
 }
-
+#menu{
+    display:none;
+}
+.menu-mobile.inactive {
+    display: none;
+}
+.menu-mobile.active {
+    display: none;
+}
 /* section: introduccion */
 
 #intro {
-    padding: 60px 100px;
+    padding: 60px 5%;
     margin: 20px;
     /* max-width: 1000px; */
     /* background-color: var(--dkblue); */
@@ -249,30 +259,6 @@ nav a:hover *, nav [class*="fa-"]:hover {
     margin: 50px;
 }
 
-
-
-@media (min-width: 850px) {
-    nav {
-      max-width: 1400px;
-      margin: 2rem auto;
-    }
-    nav li:first-child {
-      flex-basis: auto;
-      text-align: left;
-      margin-right: auto;
-    }
-}
-@media (max-width: 950px) {
-    .project img {
-        width: 250px;
-        height: 250px;
-        border-radius: 5px;
-        margin: 0;
-        padding: 0;
-    }
-  }
-
-  /*media queries*/
 /*footer: */
 
 footer {
@@ -304,3 +290,54 @@ footer p {
     font-size: 2rem;
     margin: 0;
 }
+
+  /*media queries*/
+  @media (min-width: 850px) {
+    nav {
+      max-width: 1400px;
+      margin: 2rem auto;
+    }
+    nav li:first-child {
+      flex-basis: auto;
+      text-align: left;
+      margin-right: auto;
+    }
+}
+@media (max-width: 1110px )   {
+
+    #menu{
+        display:inline;
+    }
+    .menu-mobile.inactive {
+        display: none;
+    }
+    .menu-mobile.active {
+        display: block;
+        text-align: center;
+        font-family: var(--mono);
+        list-style-type: none;
+    }
+    .menu-mobile li{
+        list-style-type: none;
+        margin-top: 10px;
+        
+    }
+    .menu-mobile a{
+        text-decoration: none;
+    }
+    nav li:not(:first-child , :last-child) { 
+        display: none;
+    }
+    nav li:first-child {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .project img {
+        width: 250px;
+        height: 250px;
+        border-radius: 5px;
+        margin: 0;
+        padding: 0;
+    }
+
+  }
