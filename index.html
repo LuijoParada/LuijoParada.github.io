@@ -12,8 +12,13 @@
      rel="stylesheet">
      <script src="https://kit.fontawesome.com/ccc5de1980.js" crossorigin="anonymous"></script>
      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oxygen+Mono&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+
 </head>
-<body>
+<body >
     <nav>
         <ul>
             <li><h1><a href="index.html"><span class="fa-solid fa-laptop-code" aria-hidden="true"></span> <span> Luis Parada</span></a></h1></li>
@@ -66,26 +71,55 @@
 
     <section  class="content-pro" id="projects">
         <h2>Projects</h2>
-        
         <div class="proyectos" >
-            <div class="project">
-                <img src="img/descarga (9).png" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Project description</p>
-                <a href="#" class="button">View project</a>
-            </div>
-            <div class="project">
-                <img src="img/descarga (7).png" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Project description</p>
-                <a href="#" class="button">View project</a>
-            </div>
-            <div class="project">
-                <img src="img/descarga (9).png" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>Project description</p>
-                <a href="#" class="button">View project</a>
-            </div>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="project">
+                            <img src="img/descarga (9).png" alt="Project 1">
+                            <h3>Project 1</h3>
+                            <p>Project description</p>
+                            <a href="#" class="button">View project</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">            
+                        <div class="project">
+                            <img src="img/descarga (7).png" alt="Project 2">
+                            <h3>Project 2</h3>
+                            <p>Project description</p>
+                            <a href="#" class="button">View project</a>
+                        </div>  
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project">
+                            <img src="img/descarga (9).png" alt="Project 3">
+                            <h3>Project 3</h3>
+                            <p>Project description</p>
+                            <a href="#" class="button">View project</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project">
+                            <img src="img/descarga (9).png" alt="Project 3">
+                            <h3>Project 4</h3>
+                            <p>Project description</p>
+                            <a href="#" class="button">View project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+              </div>
+            
         </div>
     </section>
 
@@ -114,6 +148,9 @@
         <p><small>&copy; 2024 Luis Parada. All right reserved</small></p>
     </footer>
     <script src="functions.js"></script>
+    <script type="module" src="swiper.js"></script>
+
     <script src="net.js"></script>
+    
 </body>
 </html>

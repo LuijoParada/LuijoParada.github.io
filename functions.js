@@ -25,7 +25,6 @@ setTimeout(function(){writer(palabras2, parrafo2)},2000)
 
 
 var drop = document.querySelector(".menu-mobile");
-console.log(drop)
 
 menu.addEventListener("click", (event) =>{
 
