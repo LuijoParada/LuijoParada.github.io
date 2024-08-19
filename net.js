@@ -34,8 +34,9 @@ function init() {
 }
 //esta funcion guarda los valores de alto y largo del canvas en las variables w y h y en el objeto canvas
 function resizeReset() {
-    w = canvas.width = window.innerHeight;
-    h = canvas.height = window.innerHeight;
+    w = canvas.width = document.getElementById("intro").getAttribute;
+    console.log(w);
+    h = canvas.height = document.getElementById("intro").innerHeight;
 }
 
 //En esta funcion se crea el numero de particulas que dijimos en las opciones mas arriba, se crea una particula y se envia al array particles
