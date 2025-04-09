@@ -11,13 +11,15 @@ const swiper1 = new Swiper('.swiper', {
     pagination: {
       el: '.swiper-pagination',
     },
+    
   
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  
+
+
     // And if we need scrollbar
     scrollbar: {
       el: '.swiper-scrollbar',
@@ -29,8 +31,7 @@ const swiper1 = new Swiper('.swiper', {
       // when window width is >= 320px
       1110: {
         slidesPerView: 3,
-        spaceBetween: 20
-      },
+        spaceBetween: 20     },
       // when window width is >= 480px
       710: {
         slidesPerView: 2,

@@ -25,63 +25,114 @@
 
 
 </head>
-<body  data-overlayscrollbars-initialize>
+<body  data-overlayscrollbars-initialize >
     <nav>
         <ul>
             <li><h1><a href="index.html"><span class="fa-solid fa-laptop-code" aria-hidden="true"></span> <span> Luis Parada</span></a></h1></li>
-
-            <li><a href="#projects">Projects</a></li>
-
-            <li><a href="#about">About</a></li>
-            
+            <li><a href="#projects">Projects</a></li>   
             <li><a href="#contact">Contact</a></li>
-
-            <li><a href="https://github.com/LuijoParada" target="_blank"><span class="sr-only">Github</span><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
-
-            <li><a href="#linkedin">Linked<span class="sr-only">in</span><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
-
-            <li><a href="#resume" class="button">Resume <span class="fa-solid fa-scroll" aria-hidden="true"></span></a></li>
-
+            <li><a href="#about">About</a></li>       
+            <!-- <li><a href="#resume" class="button">Resume <span class="fa-solid fa-scroll" aria-hidden="true"></span></a></li> -->
             <li class="drop-down" id="menu"><span class="sr-only">menu</span><i class="fa-solid fa-bars"></i></li>
         </ul>
-
     </nav>
     <div class="menu-mobile inactive">
         <ul>
             <li><a href="#projects">Projects</a></li>
-            
             <li><a href="#about">About</a></li>
-            
             <li><a href="#contact">Contact</a></li>
-            
             <li><a href="https://github.com/LuijoParada" target="_blank"><span class="sr-only">Github</span><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
-
-            <li><a href="#linkedin">Linked<span class="sr-only">in</span><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
-
+            <li><a href="www.linkedin.com/in/luis-jose-parada-7091b9110" target="_blank">Linked<span class="sr-only">in</span><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
             <li><a href="#resume" class="button">Resume 
-                <span class="fa-solid fa-scroll" aria-hidden="true"></span></a></li>
-                
+            <span class="fa-solid fa-scroll" aria-hidden="true"></span></a></li>
         </ul>   
     </div>
-
     <div class="line-gradient"></div>
-    
 
     <section id="intro">
-    <canvas id="canvas"></canvas>   
-        <h2 class="name">Hi, my name is <span>Luis Parada.</span></h2>
-        
-        <p class="slogan">From gears to bits,</p>
-        <p class="slogan2">empowering progress through creative solutions.</p>
-    
-        <p>I'm an informatic engineer with a strong foundation in designing and developing software solutions</p>
-    
-        <p>Currently, I'm studying mechanical engineering aiming to bridge the gap between the physical and digital world.</p>
+        <canvas id="canvas"></canvas>
+        <div class="introcontainer">
+            <div class="introimg">
+                <img id="ProfilePic" src="./img/luis.png" alt="Luis Parada"> 
+                <ul>
+                    <li><a href="https://github.com/LuijoParada" target="_blank"><span class="sr-only">Github</span><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/luis-jose-parada-7091b9110" target="_blank">Linked<span class="sr-only">in</span><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul> 
+            </div>
+            <div class="introtext">  
+                <h2 class="name">Hi, my name is <span>Luis Parada.</span></h2>
+                <p class="fondoslogan"><span class="slogan">From gears to bits,</span>
+                <span class="slogan2">empowering progress through creative solutions.</span></p>
+                <p>I'm an computer engineer with a strong foundation designing and developing software solutions</p>
+                <p>Currently, I'm studying mechanical engineering aiming to bridge the gap between the physical and digital world.</p>
+            </div>
+        </div>
+        <a href="#projects">
+        <div class="nextsection">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        </a> 
     </section>
 
     <div class="line-gradient"></div>
 
+
+
+
+
     <section  class="content-pro" id="projects">
+
+        <div class="clickout m1 inactive">
+            <div class="projects-modal active">
+                    <span class="close b1">&times;</span>
+                    <img src="img/descarga (9).png" alt="Project 1">
+                    <div class="project-icons">iconos de lenguajes</div>
+                    <h3>Melody</h3>
+                    <div class="project-description" data-overlayscrollbars-initialize>
+                        <p>Melody: Unlock Your Musical Potential with AI. This thesis project is an innovative web application for basic music learning. Its most innovative feature is an intelligent converter that, thanks to the integration of the Basic Pitch model (implemented with Python and Keras), transforms monophonic audio into precise PDF sheet music. The application also offers music theory, interactive exercises with progress tracking, and a login system with roles (user, admin, superadmin) to save transcriptions and progress.</p>
+                        <p>Developed as a Single Page Application with Angular 19, "Melody" prioritizes a fluid and agile user experience, featuring an attractive interface thanks to custom CSS components and efficient communication with the backend using Axios. The backend, built with Laravel and its MVC architecture, exposes a robust API. The management of users, sheet music, and exercises is done with an SQLite database, while integration with a CDN for file management (MP3, MIDI, PDF) was planned for a future production environment.</p>
+                    </div>
+            </div>
+        </div>
+
+        <div class="clickout m2 inactive">
+            <div class="projects-modal active">
+                    <span class="close b2">&times;</span>
+                    <img src="img/descarga (9).png" alt="Project 1">
+                    <div class="project-icons">iconos de lenguajes</div>
+                    <h3>Php Inventory</h3>
+                    <div class="project-description" data-overlayscrollbars-initialize>
+                        <p>Created a robust and user-friendly inventory management application using PHP to significantly improve stock control and operational efficiency. This system offers an intuitive interface for administrators to perform essential inventory tasks with ease. Adding new products involves capturing comprehensive details, while updating existing inventory allows for modifications to quantities, descriptions, pricing, and other relevant information.</p> 
+                        <P>The system also facilitates the removal of discontinued or sold-out items. To ensure organized inventory, a category management feature allows for the creation, modification, and deletion of product categories. Crucially, the application incorporates a secure user management module, enabling the creation of new user accounts with specific roles and permissions, the modification of existing user details, and the removal of accounts, thereby safeguarding sensitive inventory data and controlling system access.</p>
+                    </div>
+            </div>
+            
+        </div>
+
+        <div class="clickout m3 inactive">
+            <div class="projects-modal active">
+                    <span class="close b3">&times;</span>
+                    <img src="img/descarga (9).png" alt="Project 1">
+                    <div class="project-icons">iconos de lenguajes</div>
+                    <h3>Notes PWA</h3>
+                    <div class="project-description" data-overlayscrollbars-initialize>
+                        <p>This note-taking application is a Progressive Web Application (PWA) crafted solely using JavaScript. It delivers a user-friendly platform for creating, editing, and organizing notes. By adhering to PWA principles, it offers features like installability, offline availability of notes, and a responsive layout. The development process involved a strong focus on utilizing JavaScript for all aspects, including managing data persistence through local storage, dynamically updating the user interface, and implementing service workers to enable offline capabilities and enhance the overall user experience.</p>
+                    </div>
+            </div>
+        </div> 
+
+        <div class="clickout m4 inactive">
+            <div class="projects-modal active">
+                    <span class="close b4">&times;</span>
+                    <img src="img/descarga (9).png" alt="Project 1">
+                    <div class="project-icons">iconos de lenguajes</div>
+                    <h3>Coffee Shop</h3>
+                    <div class="project-description" data-overlayscrollbars-initialize>
+                        <p>For a coffee shop, I developed a comprehensive Single Page Application (SPA) that offers an intuitive interface for browsing the menu and placing online orders. The application allows users to easily navigate through different product categories and add items to their order. This project was built using only JavaScript, which allowed me to delve deeply into the application of advanced patterns and concepts such as template manipulation for dynamic interface generation, the creation of Web Components to encapsulate functionality and improve code reusability, the implementation of a routing system for navigation without page reloads, and other design principles that are fundamental in the development with popular JavaScript frameworks.</p>
+                    </div>
+            </div>
+        </div>
+
         <h2>Projects</h2>
         <div class="proyectos" >
             <div class="swiper">
@@ -90,62 +141,91 @@
                   <!-- Slides -->
                     <div class="swiper-slide">
                         <div class="project">
-                            <img src="img/descarga (9).png" alt="Project 1">
-                            <h3>Project 1</h3>
-                            <p>Project description</p>
-                            <a href="#" class="button">View project</a>
+                            <div class="tarjeta">
+                                <img src="img/descarga (9).png" alt="Project 1">
+                                <h3>Melody</h3>
+                                <p>Learn music theory<br>Convert your monofonc audio to partiture with AI</p>
+                                <div class="button-proj p1">View project</div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">            
                         <div class="project">
-                            <img src="img/descarga (7).png" alt="Project 2">
-                            <h3>Project 2</h3>
-                            <p>Project description</p>
-                            <a href="#" class="button">View project</a>
+                            <div class="tarjeta">
+                                <img src="img/descarga (7).png" alt="Project 2">
+                                <h3>Php Inventory</h3>
+                                <p>Track your inventory <br>Create categories and add your products</p>
+                                <div class="button-proj p2">View project</div>
+
+                            </div>
                         </div>  
                     </div>
                     <div class="swiper-slide">
                         <div class="project">
-                            <img src="img/descarga (9).png" alt="Project 3">
-                            <h3>Project 3</h3>
-                            <p>Project description</p>
-                            <a href="#" class="button">View project</a>
+                            <div class="tarjeta">
+                                <img src="img/descarga (9).png" alt="Project 3">
+                                <h3>Notes PWA</h3>
+                                <p>Download the PWA <br>Take notes easy in this app</p>
+                                <div class="button-proj p3">View project</div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="project">
-                            <img src="img/descarga (9).png" alt="Project 3">
-                            <h3>Project 4</h3>
-                            <p>Project description</p>
-                            <a href="#" class="button">View project</a>
+                            <div class="tarjeta">
+                                <img src="img/descarga (9).png" alt="Project 3">
+                                <h3>Coffee Shop</h3>
+                                <p>Take a look at the menu <br>Order the products that you want to buy</p>
+                                <div class="button-proj p4">View project</div>
+                            </div>  
                         </div>
                     </div>
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
               
-                <!-- If we need navigation buttons -->
+                            <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-              
                 <!-- If we need scrollbar -->
                 <!-- <div class="swiper-scrollbar"></div> -->
               </div>
-            
+                          
         </div>
+
     </section>
 
     <div class="line-gradient"></div>
-
-    <section id="contact">
+    <section class="contact" id="contact"> <!-- Call to action -->
         <h3>Contact me</h3>
-        <p>Feel free to reach out to me for new projects or just to say hi!</p>
-        <a href="mailto:lujoparca@gmail.com" class="button">Email me <i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        <p>Do you have a project in mind? feel free to reach out!</p>
+        <p>I'm always open to new collaborations and opportunities.</p>
+        <p>Let's connect and explore the possibilities together.</p>
+        <p>I'm just a message away!</p>
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/luis-jose-parada-7091b9110" target="_blank" ><span class="sr-only">Linkedin</span><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/LuijoParada" target="_blank"><span class="sr-only">Github</span><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://wa.me/584144213286" target="_blank"><i class="fa-brands fa-whatsapp"></i><span class="sr-only">whatsapp</span></a>    
+            <div class="mail-options">
+                <a href="mailto:lujoparca@gmail.com"><i class="fa-solid fa-envelope mail-button" aria-hidden="true"></i></a>
+                <i class="fa-regular fa-copy"></i>
+            </div> 
+        </div>
+        <div class="modal-copied inactive">
+            <p>Email copied to clipboard</p> 
+        </div>
     </section>
-
+    <div class="line-gradient"></div>
     <section class="about-me" id="about">
         <h2>About</h2>
-        <p></p>
+        <div class="about-grid">
+            <div class="about-text"  data-overlayscrollbars-initialize>
+                <p>"Hello! As you saw above, my name is Luis Parada. I'm a Computer Engineer and web developer from Venezuela. I love turning ideas into functional code and creating engaging digital experiences. I've worked on projects in many programming languages, but my main languages are JavaScript and Python.</p>
+
+                 <p>I'm always looking to learn and improve, exploring new technologies and trends to offer innovative solutions. When I'm not coding, I enjoy taking a good walk in the mountains, listening to good music, and playing video games with my friends. If you're looking for someone committed to web development and creativity, let's talk and build something amazing together!"</p>
+            </div>
+            <img src="img/laptop.png" alt="pc" class="about-img">
+        </div>
     </section>
 
     <div class="line-gradient"></div>
@@ -154,10 +234,14 @@
         <ul>
             <li><a href="https://github.com/LuijoParada" target="_blank"> <span class="sr-only">Github</span><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
             <li><a href="">Linked<span class="sr-only">in</span><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
-            <li><a href=""><span class="sr-only">Email</span><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
-            
+            <li>
+                <div class="mail-options">
+                    <a href="mailto:lujoparca@gmail.com"><i class="fa-solid fa-envelope mail-button" aria-hidden="true"></i></a>
+                    <i class="fa-regular fa-copy"></i>
+                </div> 
+            </li>
         </ul>
-        <p><small>&copy; 2024 Luis Parada. All right reserved</small></p>
+        <p><small>"If debugging is the process of removing software bugs, then programming must be the process of putting them in." - Edsger Dijkstra</small></p>
     </footer>
     <script src="functions.js"></script>
     <script type="module" src="swiper.js"></script>

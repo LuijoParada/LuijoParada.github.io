@@ -4,12 +4,12 @@ var w, h, loopId, id, canvas, ctx, particles;
 var options = {
     particleColor: "rgba(255,255,255)",
     lineColor: "rgba(0,181,255)",
-    particleAmount: 12,
+    particleAmount: 30,
     defaultRadius: 0.5,
     variantRadius: 1,
     defaultSpeed: 0.1,
     variantSpeed: 1,
-    linkRadius: 100
+    linkRadius: 200
 };
 //se utiliza una expresion regular para extraer los digitos de los colores rgb
 var rgb = options.lineColor.match(/\d+/g);
@@ -34,10 +34,24 @@ function init() {
 }
 //esta funcion guarda los valores de alto y largo del canvas en las variables w y h y en el objeto canvas
 function resizeReset() {
-    w = canvas.width = document.getElementById("intro").clientHeight;
-    h = canvas.height = document.getElementById("intro").clientHeight;
-}
+    const intro = document.getElementById("intro");
+    const dpr = window.devicePixelRatio || 1;
 
+    w = intro.clientWidth;
+    h = intro.clientHeight;
+
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+
+    canvas.style.width = `${w}px`;
+    canvas.style.height = `${h}px`;
+
+    ctx.scale(dpr, dpr);
+}
+window.addEventListener("resize", () => {
+    resizeReset();
+    initialiseElements();
+});
 //En esta funcion se crea el numero de particulas que dijimos en las opciones mas arriba, se crea una particula y se envia al array particles
 function initialiseElements() {
     particles = [];
