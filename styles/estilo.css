@@ -830,7 +830,25 @@ footer p small {
         left: 5%;
         width: 90%; 
     }
+    .introtext span{
+        display: block;
+    }
+    .introtext .slogan{
+        font-size: 1.3rem!important;    
+    }
+    .introtext .slogan2{
+        font-size: 1.3rem!important;        }
 
+
+    a .nextsection i { /*centrado en el div*/
+        position: relative ;
+        display: inline-block;
+        left: 40%;
+        text-decoration: none;
+    }
+    .pa1{
+        margin: 0 0 2%;
+    }
 
     .proyectos{
         width: 95%;
