@@ -47,6 +47,7 @@ function resizeReset() {
     canvas.style.height = `${h}px`;
 
     ctx.scale(dpr, dpr);
+
 }
 window.addEventListener("resize", () => {
     resizeReset();
