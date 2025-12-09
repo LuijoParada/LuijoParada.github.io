@@ -60,9 +60,13 @@ nav h1 a {
 }
 
 nav ul {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     list-style-type: none;
-    margin: 0 10%;
+    margin: 0 1%;
     padding: 0;
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -150,9 +154,10 @@ nav a:hover *, nav [class*="fa-"]:hover {
 }
 .introtext{
     position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 55%; 
+    top: 20%;
+    left: 15%;
+    width: 50%; 
+    height: 50%;
     background-color: rgba(13, 49, 75, 0.5);
     padding: 2%;
     border-radius: 50px;
@@ -160,31 +165,35 @@ nav a:hover *, nav [class*="fa-"]:hover {
 }
 .introimg{
     position: absolute;
-    top: 10%;
-    right: 10%;
-    width: 22%;
-    height: 367px;
+    top: 20%;
+    right: 15%;
+    width: 17%;
+    height: 50%;
+    /*max-height: 394px ;*/
     border-radius: 50px;
     border: #0d314b 2px solid ;
     background-color: rgba(13, 49, 75, 0.5) ;
 }
 #ProfilePic{
-    position: relative;
-    max-width: 250px;   
-    width: 90%;
+    position: absolute;
+    width: 60%;
     top: 5%;
-    left: 5%;;
-    margin: auto;
+    left: 5%;
+    right: 5%;
+    margin: auto    ;
     border-radius: 20%;
     border: #4b0d49 2px solid;
 }
 .introimg ul {
-    position: relative;
+    position: absolute;
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin: 20% 0;
+    top: 75%;
+    left: 0;
+    right: 0;
+    margin: auto;
     padding: 0;
     align-items: center;
     gap: 2rem;
@@ -274,7 +283,8 @@ nav a:hover *, nav [class*="fa-"]:hover {
 }
 .nextsection i { /*centrado en el div*/
     position: relative ;
-    left: 46.35%;
+    left: 50%;
+    transform: translateX(-50%);
     color: var(--aqua);
     text-decoration: none;
     padding: 1rem 2rem;
@@ -386,14 +396,14 @@ nav a:hover *, nav [class*="fa-"]:hover {
 .content-pro h2{
     position: relative;;
     display: inline-block;
-    margin: 10px 0;
+    margin: 5% 0 0 0;
     font-family: var(--mono);
     font-size: 2rem;
 }
 
 .proyectos{
     position: relative;
-    top: 5%;
+    top: 15%;
     width: 90%;
     margin: auto;
     height: 80vh; 
@@ -522,24 +532,28 @@ nav a:hover *, nav [class*="fa-"]:hover {
 .contact {
     margin: 0.1px;
     padding: 0.1px;
-    height: 70vh;
+    height: 50vh;
     font-family: var(--mono);
     background-color: rgba(13, 49, 75, 0.2);
     color: var(--white);
     text-align: center;
     
 }
+.contact-box{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .contact h3 {
+    position: relative;
     font-family: var(--mono);
     color: var(--white );
-    margin: 4% 0 ;
     font-size: 2rem;
     line-height: 1;
 }
 .contact p {
     font-size: 1.5rem;
     line-height: 1.2;
-    margin: 0 0 15px;
 }
 
 .contact-icons {
@@ -551,6 +565,7 @@ nav a:hover *, nav [class*="fa-"]:hover {
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    margin: 1% 0;
     font-family: var(--mono);
     color: var(--white);
     text-align: center; 
@@ -647,10 +662,30 @@ section [class*="fa-"]:hover {
     position: relative;
     margin: 0.1px;
     padding: 0.1px;
-    height: 100vh;
+    height: 50vh;
     color: var(--white);
+    overflow-y: auto;
     
 }
+
+.about-box{
+    position: relative;
+    top: 35%;
+    transform: translateY(-50%);
+
+}
+.about-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
 .about-me h2 {
     font-family: var(--mono);
     font-size: 2rem;
@@ -669,13 +704,8 @@ section [class*="fa-"]:hover {
 } */
 
  .about-text{
-    position: relative;
-    display: inline-block;
     font-family: var(--mono);
-    top: 4%;
     left: 10%;
-    width: 45%;
-    max-height: 395px;
     overflow: scroll;
     padding: 1%;
     font-size: 1rem;
@@ -684,16 +714,11 @@ section [class*="fa-"]:hover {
     border-radius: 20px;
     border: #084f83 2px solid;
     background-color: rgba(13, 49, 75, 0.2);
-
-
-
  }
-.about-grid .about-img {
+.about-img {
     position: absolute;
-    display: inline-block; 
-    top: 24%;
     right: 10%;
-    width: 30%;
+    height: 100%;
     border-radius: 20px;
     border: #4b0d49 2px solid;
     background-color: rgba(13, 49, 75, 0.08); 
@@ -762,19 +787,14 @@ footer p small {
 
 @media (max-width: 1024px )   {
     nav ul {
-        list-style-type: none;
-        margin: 0 10%;
+        list-style-type: none;;
         padding: 0;
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-        align-items: center;
         gap: 3rem;
         font-family: var(--mono);
     }
     nav li:last-child{
-        font-size: 1.5rem;
         position: relative;
+        font-size: 1.5rem;
         right: 5px;
     }
     
@@ -826,24 +846,30 @@ footer p small {
     }
     .introtext{
         position: absolute;
+        padding: 4%;
         top: 10%;
         left: 5%;
         width: 90%; 
+        height: auto;
     }
     .introtext span{
         display: block;
+        margin: 0;
     }
     .introtext .slogan{
-        font-size: 1.3rem!important;    
+        font-size: 1.1rem!important;  
+          
     }
     .introtext .slogan2{
-        font-size: 1.3rem!important;        }
+        font-size: 1.1rem!important;
+    }
 
 
     a .nextsection i { /*centrado en el div*/
         position: relative ;
         display: inline-block;
-        left: 40%;
+        left: 50%;
+        transform: translateX(-50%);
         text-decoration: none;
     }
     .pa1{
@@ -882,18 +908,21 @@ footer p small {
         left: 10%;
         width: 80%;
     }
-    .contact{
-        padding-top: 5rem;
+    
+    .contact-box{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
     }
-    .contact p {
-        font-size: 1.4rem;
-        line-height: 1.2;
 
-    }
     .contact h3{
         display: none;
     }
-    
+       .contact p {
+        font-size: 1.1rem;
+        line-height: 1.2;;
+
+    } 
     .contact-icons{
         font-size: 1rem;
     }
@@ -904,12 +933,44 @@ footer p small {
         font-size: 1rem;
         height: 1.5rem;
     }
-
-    .about-me .about-text{
-        width: 80%;
+    .about-me{
+        height: 80vh;
     }
+    .about-me h2 {
+        font-size: 1.5rem;
+        margin: 0.5rem;    
+        padding: 0;
+    }
+    .about-box{
+        position: relative;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        
+    }    
+    
+    .about-grid {
+        position: relative;
+        display: block;
+        
+
+    }
+
     .about-me .about-img{
         display: none;  
+    }
+
+    .about-text{
+        font-family: var(--mono);
+        height: 60vh;
+        font-size: 1rem;
+        line-height: 1.5;
+        left: 0;
+        border-radius: 20px;
+        background-color: rgba(13, 49, 75, 0.2);
+        padding: 2%;
+        margin-right: 0;
+        
     }
 
     footer ul{
